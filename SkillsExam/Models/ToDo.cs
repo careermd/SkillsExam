@@ -1,10 +1,17 @@
-﻿namespace SkillsExam.Models
+﻿using System.Text.Json.Serialization;
+
+namespace SkillsExam.Models
 {
-				public class ToDo
-				{
-								public int UserId { get; set; }
-								public int Id { get; set; }
-								public string? Title { get; set; }
-								public bool Completed { get; set; }
-				}
+	public class ToDo
+	{
+        [JsonPropertyName("userId")]
+        public int UserId { get; set; }
+
+        [JsonPropertyName("id")]
+        public int Id { get; set; }
+        [JsonPropertyName("title")]
+        public string? Title { get; set; }
+        [JsonPropertyName("completed")]
+        public bool Completed { get; set; }
+	}
 }
